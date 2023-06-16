@@ -20,11 +20,14 @@ add(str) {
 }
 
 remove(index) {
-  this.list.splice(index,index)
+  let r = this.list
+  r.splice(index,1)
 }
 
 update(index, updatedTodo) {
-  this.list[index] = updatedTodo
+  if(index <this.list.length) {
+  this.list[index] = updatedTodo }
+  
 }
 
 getAll() {
